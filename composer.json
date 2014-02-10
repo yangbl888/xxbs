@@ -4,7 +4,10 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.1.*"
+		"laravel/framework": "4.1.*",
+                "codesleeve/sprockets": "dev-master",
+                "nitra/php-min": "dev-master",
+                "codesleeve/asset-pipeline": "v1.4.4"
 	},
 	"autoload": {
 		"classmap": [

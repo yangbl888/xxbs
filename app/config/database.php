@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'daffodil',
+			'database'  => 'daffodil_xxbs',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',

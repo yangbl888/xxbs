@@ -39,7 +39,7 @@ return array(
 	|
 	*/
 
-	'timezone' => 'UTC',
+	'timezone' => 'PRC', //'UTC',使用北京时间
 
 	/*
 	|--------------------------------------------------------------------------
@@ -106,6 +106,7 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+        'Codesleeve\AssetPipeline\AssetPipelineServiceProvider',
 
 	),
 
@@ -174,5 +175,9 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
 
 	),
+    
+    'config' => array(
 
+		'Apptitle'             => 'dsfsdfsdf',
+      ),
 );

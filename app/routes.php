@@ -20,7 +20,10 @@ Route::get('/', function()
 
 Route::get('/',function() 
        { 
-           return View::make('home.index'); 
+           //$posts = DB::table('rbac_user')->paginate(10);
+          
+           //return View::make('home.index')->with('posts', $posts); 
+          return View::make('login');
        }); 
 
 
