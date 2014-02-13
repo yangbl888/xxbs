@@ -18,13 +18,15 @@ Route::get('/', function()
 
 */
 
-Route::get('/',function() 
-       { 
-           //$posts = DB::table('rbac_user')->paginate(10);
-          
-           //return View::make('home.index')->with('posts', $posts); 
-          return View::make('login');
-       }); 
+Route::controller('user', 'UserController');
+//Route::get('user', 'UserController@getIndex'); //显示用户首页
+
+Route::get('rbac/{id}', function($id)
+{
+    return 'Hello World--'.$id;
+});
+
+
 
 
 Route::get('doc',function() 

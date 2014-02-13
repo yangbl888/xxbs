@@ -10,14 +10,14 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var string
 	 */
-	protected $table = 'users';
+	protected $table = 'rbac_user';
 
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *
 	 * @var array
 	 */
-	protected $hidden = array('password');
+	protected $hidden = array('Password');
 
 	/**
 	 * Get the unique identifier for the user.
@@ -36,7 +36,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	public function getAuthPassword()
 	{
-		return $this->password;
+		return $this->Password;
 	}
 
 	/**
@@ -48,5 +48,13 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	{
 		return $this->email;
 	}
+
+     //录入校验
+   public static $rules = array(
+    'UserId'=>'required|alpha|min:2|unique:rbac_user',
+    'Email'=>'required|email|unique:rbac_user',
+    'password'=>'required|alpha_num|between:4,12|confirmed',
+    'password_confirmation'=>'required|alpha_num|between:4,12'
+    );
 
 }
