@@ -1,0 +1,1 @@
+cmd /k cd/d "d:\web\myproj"

@@ -1,0 +1,70 @@
+由于这是 及其正当 及其迫切 的需求，于是博主本着积极向上的心态，以及不动源码一分一毫的原则，奋战了10分钟后终于找到了解决方案：
+?首选，我们需要建立一个文件 /app/commands/Illuminate/Database/Schema/Grammars/MySqlGrammar.php 目录请自行补完。
+?复制 MySqlGrammar.php 文件的内容到你自己的文件并保存。
+?执行 php artisan dump-autoload 命令。
+
+OK，大功告成，享受吧
+ 
+实例
+
+
+
+
+view source
+
+
+
+print
+
+?
+
+
+
+
+01 
+public function up() 
+
+
+
+02 
+{ 
+
+
+
+03 
+    Schema::create('url_shortened', function(Blueprint $table) 
+
+
+
+04 
+    { 
+
+
+
+05 
+        $table->increments('id'); 
+
+
+
+06 
+        $table->string('url')->unique()->comment('完整的URL链接'); 
+
+
+
+07 
+        $table->string('shortened', 5)->comment('缩短后的代码，不包含域名'); 
+
+
+
+08 
+        $table->timestamps(); 
+
+
+
+09 
+    }); 
+
+
+
+10 
+} 

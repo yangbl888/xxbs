@@ -19,7 +19,7 @@ Route::get('/', function()
 */
 
 Route::controller('user', 'UserController');
-//Route::get('user', 'UserController@getIndex'); //显示用户首页
+
 
 Route::get('rbac/{id}', function($id)
 {
