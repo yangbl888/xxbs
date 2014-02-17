@@ -1,6 +1,6 @@
 <?php
 
-class UserController extends BaseController {
+class UserController extends \BaseController {
 
 	/**
 	 * Setup the layout used by the controller.
@@ -23,7 +23,7 @@ class UserController extends BaseController {
     }
 
  //处理登录
- public function postLogin()
+ public function postSignin()
     {
    if (Auth::attempt(array('UserId'=>Input::get('UserId'), 'password'=>Input::get('password')))) {
   return Redirect::to('user/index')->with('message', '登录成功!');
@@ -60,7 +60,8 @@ class UserController extends BaseController {
    //显示首页
  public function getIndex()
     {
-          $this->layout->content = View::make('user.index');
+      //   $this->layout->content = View::make('user.index'); //直接跳转到信息快报的管理页
+        return Redirect::to('info/');
     }
  
 

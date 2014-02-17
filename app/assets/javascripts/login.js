@@ -53,12 +53,13 @@ var Login = function () {
 	        });
 
 	        $('.login-form input').keypress(function (e) {
-	            if (e.which == 13) {
+	          /*  if (e.which == 13) {
 	                if ($('.login-form').validate().form()) {
-	                    window.location.href = "rbac/login";
+	                    window.location.href = "signin";
 	                }
 	                return false;
 	            }
+                */
 	        });
 
 	        $('.forget-form').validate({

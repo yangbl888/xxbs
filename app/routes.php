@@ -17,15 +17,12 @@ Route::get('/', function()
 });
 
 */
-
+//登录帐号
 Route::controller('user', 'UserController');
-
-
-Route::get('rbac/{id}', function($id)
-{
-    return 'Hello World--'.$id;
-});
-
+//用户管理
+Route::resource('users', 'UsersController');
+//信息快报
+Route::resource('info',   'InfoController');
 
 
 

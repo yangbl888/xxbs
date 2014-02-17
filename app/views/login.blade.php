@@ -41,7 +41,7 @@
 
 		<!-- BEGIN LOGIN FORM -->	
         
-        {{ Form::open(array('url'=>'user/login', 'class'=>'form-vertical login-form')) }}
+        {{ Form::open(array('url'=>'user/signin', 'class'=>'form-vertical login-form')) }}
 
 			<h4 class="form-title">用户登录</h4>
 
